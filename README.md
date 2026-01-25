@@ -12,15 +12,17 @@ Incluye creación de esquema, carga de datos fake y consultas con JOIN.
 ## Estructura del proyecto
 
 sqlite3_project/
-├─ db/
-│  ├─ schema.sql    # Esquema de la base de datos sql
-│  └─ database.db   # Archivo con la base de datos
-├─ src/
-│  ├─ db.py         # Crea la conexión a la base de datos, y si no existe, la crea.
-│  ├─ seed.py       # Define las funciones de insersión de datos.
-│  └─ queries.py    # Define las funciones con las consultas a la base de datos.
-├─ main.py          # Importa las funciones para crear la bbdd, insertar datos y hacer consultas.
-└─ README.md
+├── db/
+│   ├── schema.sql    # Esquema de la base de datos (DDL)
+│   └── database.db   # Archivo de la base de datos (generado al ejecutar)
+├── src/
+│   ├── __init__.py   # Archivo necesario para tratar la carpeta como paquete
+│   ├── db.py         # Gestión de conexión y creación de la BBDD
+│   ├── seed.py       # Funciones para inserción de datos masivos
+│   ├── queries.py    # Consultas SQL, JOINs y agregaciones
+│   └── main.py       # Punto de entrada que coordina todo el flujo
+├── .gitignore        # Archivos excluidos del repositorio
+└── README.md         # Documentación y guía del proyecto
 
 ## Modelo de datos
 
@@ -35,14 +37,17 @@ sqlite3_project/
 
 ## Cómo ejecutar el proyecto
 
-1. Crear la base de datos y las tablas:
-    sqlite3 db/database.db < db/schema.sql
+Este proyecto está diseñado para ser "plug & play". No necesitas configurar la base de datos manualmente..
 
-2. Insertar datos fake:
-    python src/seed.py
+1 - Clona el repositorio:
+git clone https://github.com/Barbara-Arnold/sqlite-python-practice.git
 
-3. Ejecutar consultas:
-    python src/queries.py
+2 - Entra en la carpeta: cd sqlite3_project
+
+3 - Lanza el programa con el comando de abajo o ejecuta en tu editor el archivo main.py:
+python src/main.py 
+
+Nota: El script detectará si la base de datos existe; si no, creará la carpeta db/, generará el archivo database.db, insertará los datos de prueba y mostrará los resultados..
 
 ## Qué se demuestra
 
