@@ -22,7 +22,7 @@ sqlite3_project/
 │   ├── queries.py          # Consultas SQL, JOINs y agregaciones
 │   └── main.py             # Punto de entrada que coordina todo el flujo
 ├── .gitignore              # Archivos excluidos del repositorio
-└── README.md               # Documentación y guía del proyecto
+└── README.md               # Documentación y guía del proyecto 
 
 ## Modelo de datos
 
