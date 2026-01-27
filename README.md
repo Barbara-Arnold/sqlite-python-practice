@@ -10,9 +10,8 @@ Incluye creación de esquema, carga de datos fake y consultas con JOIN.
 - Faker (datos de prueba)
 
 ## Estructura del proyecto
-
+'''text
 sqlite3_project/
-
 ├── db/
 │ ├── schema.sql    # Esquema de la base de datos (DDL)
 │ └── database.db   # Archivo de la base de datos (generado al ejecutar)
@@ -24,7 +23,7 @@ sqlite3_project/
 │ └── main.py       # Punto de entrada que coordina todo el flujo
 ├── .gitignore      # Archivos excluidos del repositorio
 ├── README.md       # Documentación y guía del proyecto      
-└── CONTRIBUTING.md # Guía para contribuir en el proyecto
+└── CONTRIBUTING.md # Guía para contribuir en el proyecto'''
 
 ## Modelo de datos
 
