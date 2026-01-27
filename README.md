@@ -24,6 +24,7 @@ sqlite3_project/
 ├── .gitignore      # Archivos excluidos del repositorio
 ├── README.md       # Documentación y guía del proyecto      
 └── CONTRIBUTING.md # Guía para contribuir en el proyecto
+```
 
 ## Modelo de datos
 
