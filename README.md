@@ -12,7 +12,7 @@ Incluye creación de esquema, carga de datos fake y consultas con JOIN.
 ## Estructura del proyecto
 
 sqlite3_project/
-=======
+
 ├── db/
 │ ├── schema.sql    # Esquema de la base de datos (DDL)
 │ └── database.db   # Archivo de la base de datos (generado al ejecutar)
