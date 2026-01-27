@@ -10,7 +10,7 @@ Incluye creación de esquema, carga de datos fake y consultas con JOIN.
 - Faker (datos de prueba)
 
 ## Estructura del proyecto
-'''text
+```text
 sqlite3_project/
 ├── db/
 │ ├── schema.sql    # Esquema de la base de datos (DDL)
