@@ -13,17 +13,20 @@ Incluye creación de esquema, carga de datos fake y consultas con JOIN.
 ```
 sqlite3_project/
 ├── db/
-│ ├── schema.sql    # Esquema de la base de datos (DDL)
-│ └── database.db   # Archivo de la base de datos (generado al ejecutar)
+│ ├── schema.sql     # Esquema de la base de datos (DDL)
+│ └── database.db    # Archivo de la base de datos (generado al ejecutar)
 ├── src/
-│ ├── **init**.py   # Archivo necesario para tratar la carpeta como paquete
-│ ├── db.py         # Gestión de conexión y creación de la BBDD
-│ ├── seed.py       # Funciones para inserción de datos masivos
-│ ├── queries.py    # Consultas SQL, JOINs y agregaciones
-│ └── main.py       # Punto de entrada que coordina todo el flujo
-├── .gitignore      # Archivos excluidos del repositorio
-├── README.md       # Documentación y guía del proyecto      
-└── CONTRIBUTING.md # Guía para contribuir en el proyecto
+│ ├── **init**.py    # Archivo necesario para tratar la carpeta como paquete
+│ ├── db.py          # Gestión de conexión y creación de la BBDD
+│ ├── seed.py        # Funciones para inserción de datos masivos
+│ ├── queries.py     # Consultas SQL, JOINs y agregaciones
+│ └── main.py        # Punto de entrada que coordina todo el flujo
+├── core_reconciliation/
+│   ├── database.py  # Gestión de conexión, tablas financieras y logs de auditoría  
+│   └── seed_data.py # Inyección de escenarios y facturas de prueba
+├── .gitignore       # Archivos excluidos del repositorio
+├── README.md        # Documentación y guía del proyecto
+└── CONTRIBUTING.md  # Guía para contribuir en el proyecto
 ```
 
 ## Modelo de datos
