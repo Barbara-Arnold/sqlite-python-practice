@@ -8,3 +8,6 @@ __pycache__/
 # Archivos del sistema
 .DS_Store
 Thumbs.db
+
+# Posibles restos de archivos no deseados traspapelados
+*.properties
