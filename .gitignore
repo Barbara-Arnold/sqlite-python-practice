@@ -11,3 +11,6 @@ Thumbs.db
 
 # Posibles restos de archivos no deseados traspapelados
 *.properties
+
+# Bases de datos locales (Fintech Suite)
+data/*.db
