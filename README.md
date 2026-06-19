@@ -82,7 +82,7 @@ Proyecto avanzado de desarrollo backend enfocado en soluciones financieras corpo
 
 **Alcance del hito actual:**
 * [x] Diseño del modelo de datos e integridad financiera (Completado: 12/06)
-* [ ] Parser automatizado de extractos bancarios (CSV)
+* [x] Parser automatizado de extractos bancarios (CSV) (Completado: 19/06)
 * [ ] Motor de emparejamiento por reglas jerárquicas
 * [ ] Tabla e implementación de logs de auditoría (Compliance)
 
@@ -109,3 +109,11 @@ Proyecto avanzado de desarrollo backend enfocado en soluciones financieras corpo
 
 * **¿Por qué SQLite con Patrón Repositorio?** Se utiliza SQLite para agilizar el desarrollo del prototipo en entorno local. Sin embargo, toda la interacción con la base de datos se abstrae tras una capa de persistencia (clases Repositorio). Esto garantiza que el sistema pueda migrar a una base de datos relacional corporativa (como PostgreSQL) modificando únicamente la cadena de conexión, sin alterar una sola línea de la lógica de negocio.
 * **¿Por qué el control de céntimos e importes estrictos?** En desarrollo Fintech, el uso de tipos de datos flotantes (`float`) está descartado debido a los errores de redondeo binario. Toda la lógica maneja precisión decimal exacta expresada en la divisa correspondiente (`EUR`), protegiendo la integridad de los balances.
+
+---- 19 junio 2026
+### 🧪 Escenarios de Prueba (Dataset Bancario)
+Para validar la robustez y los diferentes niveles del motor de conciliación, el archivo `data/bank_statement.csv` se ha configurado intencionadamente con las siguientes casuísticas del mundo real:
+
+1. **Coincidencia Exacta (Match Perfecto):** Transacción de `1500.00` de *AeroSpace S.L.* que coincide al céntimo y en referencia con la factura `INV-2026-001`.
+2. **Tolerancia de Céntimos (Lógica Difusa):** Transacción de `850.48` para una factura de `850.50` (*TecnoGalicia S.A.*). Ponemos a prueba el umbral técnico de tolerancia por un desfase de 2 céntimos.
+3. **Pago Parcial / Agrupado:** Transferencia de `1000.00` de *Wonbu Logistics*. Evaluaremos cómo el motor gestiona este importe frente a las dos facturas pendientes de la empresa (`300.00` y `700.00`).
